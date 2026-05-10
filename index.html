@@ -74,11 +74,15 @@
 
     <h2>Login</h2>
 
-    <input type="text" id="username" placeholder="Username">
+    <form method="POST">
 
-    <input type="password" id="password" placeholder="Password">
+    <input type="text" name="username" placeholder="Username">
 
-    <button onclick="login()">Login</button>
+    <input type="password" name="password" placeholder="Password">
+
+    <button type="submit">Login</button>
+
+</form>>
 
     <div class="error" id="error-msg">
         Λάθος στοιχεία!
@@ -89,27 +93,6 @@
 <div id="welcome-page">
     <h1>Καλώς ήρθες!</h1>
 </div>
-
-<script>
-
-function login(){
-
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    if(username === "admin" && password === "1234"){
-
-        document.getElementById("login-page").style.display = "none";
-
-        document.getElementById("welcome-page").style.display = "block";
-
-    }else{
-
-        document.getElementById("error-msg").style.display = "block";
-    }
-}
-
-</script>
 
 </body>
 </html>
